@@ -1,0 +1,23 @@
+﻿# OS/editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Dependencies & builds
+node_modules/
+dist/
+build/
+
+# Virtual envs (python)
+.venv/
+env/
+
+# Logs
+*.log
+
+# Local config & secrets
+.env
+.env.*
+credentials/
+credentials/*.json

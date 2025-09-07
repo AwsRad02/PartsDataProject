@@ -1,0 +1,129 @@
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit',sans-serif;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'outfit';
+  
+}
+
+.background {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to right, #bcdff7, #f2c6a2);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 40px;
+  position: relative;
+}
+
+.header {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+}
+
+.header h1 {
+  color: #003366;
+  font-size: 28px;
+  font-weight: 700;
+  font-family: "Outfit";
+}
+
+.login-box {
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  text-align: center;
+  width: 320px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  align-self: center;
+  margin: 0 auto;
+}
+
+.login-box h2 {
+  color: #002b6b;
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.login-box p {
+  color: #3f3f3f;
+  font-size: 14px;
+  margin-bottom: 25px;
+  font-weight: 400;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 35px 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #f4f4f4;
+  font-size: 14px;
+}
+
+.input-group .icon {
+  position: absolute;
+  right: 10px;
+  font-size: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+
+  
+}
+
+.forgot {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 20px;
+  color: #003366;
+  text-decoration: none;
+}
+
+button {
+  background-color: #003366;
+  color: white;
+  border: none;
+  padding: 10px 0;
+  width: 100%;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #005599;
+}
+
+
+.email-icon {
+  background-image: url("/static/images/iconEmail.png");
+}
+.password-icon {
+  background-image: url('/static/images/IconLock.png');
+}

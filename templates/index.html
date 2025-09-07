@@ -1,0 +1,30 @@
+
+<!-- AJAX -->
+ <!--
+        ✅ Stays on the same page — no reload
+
+        ✅ You can show alerts, update the page, or validate without refreshing
+
+        ✅ Faster and smoother user experience
+
+        ✅ Easier to submit multiple forms, or dynamic ones
+    -->
+
+
+<script>
+document.querySelector('form').addEventListener('submit', async function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(this);
+  const plainData = Object.fromEntries(formData.entries());
+
+  const res = await fetch('http://127.0.0.1:5000/submit-data', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(plainData)
+  });
+
+  const result = await res.json();
+  alert(result.message);
+});
+</script>

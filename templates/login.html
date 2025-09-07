@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FCM Dallas Login</title>
+  <title>Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/loginStyle.css') }}?v=2">
+  <script type="module" src="{{ url_for('static', filename='auth.js') }}"></script>
+
+
+</head>
+<body>
+  <div class="background">
+    <div class="header">
+      <h1>FCM Dallas</h1>
+    </div>
+
+    <div class="login-box">
+      <h2>Welcome!</h2>
+      <p>To access our Data please log in<br/>using your personal credentials</p>
+      
+      <form method="POST" action="{{url_for('login')}}">
+        <div class="input-group">
+          <input type="email" name="email" placeholder="Email" required />
+          <span class="icon email-icon"></span>
+        </div>
+        <div class="input-group">
+          <input type="password" name="password" placeholder="Password" required />
+          <span class="icon password-icon" ></span>
+        </div>
+        <a href="#" class="forgot" id="forgot-link">Forget Your Password ?</a>
+        <div id="forgot-alert-placeholder"></div>
+
+        <button type="submit">Login</button>
+        <!-- ninja block to show error and alert-->
+        {% if error %}
+        <div id="alertBox" style="background: #f8d7da; color: #721c24; padding: 10px; margin-top: 10px; border: 1px solid #f5c6cb; border-radius: 5px; position: relative;">
+         {{ error.replace('_', ' ').capitalize() }}
+        <span onclick="document.getElementById('alertBox').style.display='none'" style="position: absolute; right: 10px; top: 5px; cursor: pointer;">&times;</span>
+          </div>
+        {% endif %}
+      </form>
+    </div>
+  </div>
+
+
+
+</body>
+</html>

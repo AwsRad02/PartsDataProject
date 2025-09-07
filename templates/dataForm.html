@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Page</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/dataFormStyle.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet" />
+  
+</head>
+<p class="par-style">ALL LH -- GAS/HEV -- SEDAN/HATCHBACK -- CONVERTABLE/COUP </p>
+<div class="part-row" id="lookup-row">
+  <label>Is It in Our DB ?</label>
+
+  <input type="text" id="yearInput"  placeholder="Year" maxlength="4" inputmode="numeric"
+         oninput="this.value=this.value.replace(/[^0-9]/g,'')" />
+
+  <input type="text" id="makeInput"  placeholder="Make" />
+
+  <input type="text" id="modelInput" placeholder="Model" />
+
+  <input type="text" id="trimInput"  placeholder="Trim" />
+  <button type="button" id="check-btn" class="check-btn">Check</button>
+</div>
+
+<div class="part-row" id="add-row">
+  <label>Add the car </label>
+  <input type="text" id="yearFromInput" placeholder="Year From" maxlength="4" inputmode="numeric"
+         oninput="this.value=this.value.replace(/[^0-9]/g,'')" />
+  <input type="text" id="yearToInput"   placeholder="Year To"   maxlength="4" inputmode="numeric"
+         oninput="this.value=this.value.replace(/[^0-9]/g,'')" />
+  <input type="text" id="makeAddInput"     placeholder="Make" />
+  <input type="text" id="modelAddInput"    placeholder="Model" />
+  <input type="text" id="trimAddInput"     placeholder="Trim" />
+  <button type="button" id="add-btn" class="check-btn">Add</button>
+</div>
+
+<br>
+
+      <!-- Parts Section -->
+      <div class="parts-section">
+        <!--this block for part -->
+        <div class="part-row" id="headlight-row">
+          <label>Headlight</label>
+          <input type="text"  name="headlight-price-from" placeholder="Price From" />
+          <input type="text" name="headlight-price-to" placeholder="Price To" />
+          <input type="text"  name="headlight-part-number" placeholder="Part Number" />
+          <input type="text"  name="headlight-year-from" placeholder="Year From" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+          <input type="text"  name="headlight-year-to" placeholder="Year To" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+
+        </div>
+
+        <div class="part-row">
+          <label>Fog Light</label>
+          <input type="text"  name="foglight-price-from" placeholder="Price From" />
+          <input type="text"  name="foglight-price-to" placeholder="Price To" />
+          <input type="text"   name="foglight-part-number" placeholder="Part Number" />
+          <input type="text"   name="foglight-year-from" placeholder="Year From" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+          <input type="text"   name="foglight-year-to" placeholder="Year To" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+        </div>
+
+        <div class="part-row">
+          <label>Front Bumper</label>
+           <input type="text"  name="foglight-price-from" placeholder="Price From" />
+          <input type="text"   name="foglight-part-number"  placeholder="Price To" />
+          <input type="text"   name="foglight-part-number" placeholder="Part Number" />
+          <input type="text" name="foglight-year-from" placeholder="Year From" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+          <input type="text"   name="foglight-year-to" placeholder="Year To" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+        </div>
+
+        <div class="part-row">
+          <label>Front Lower Bumper</label>
+          <input type="text" placeholder="Price From" />
+          <input type="text" placeholder="Price To" />
+          <input type="text" placeholder="Part Number" />
+          <input type="text" placeholder="Year From" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+          <input type="text" placeholder="Year To" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+        </div>
+
+        <div class="part-row">
+          <label>Rear Bumper</label>
+          <input type="text" placeholder="Price From" />
+          <input type="text" placeholder="Price To" />
+          <input type="text" placeholder="Part Number" />
+          <input type="text" placeholder="Year From" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+          <input type="text" placeholder="Year To" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+        </div>
+
+
+         <div class="part-row">
+          <label>Rear Lower Bumper</label>
+          <input type="text" placeholder="Price From" />
+          <input type="text" placeholder="Price To" />
+          <input type="text" placeholder="Part Number" />
+          <input type="text" placeholder="Year From" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+          <input type="text" placeholder="Year To" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+        </div>
+
+        <div class="part-row">
+          <label>Tail light on body</label>
+          <input type="text" placeholder="Price From" />
+          <input type="text" placeholder="Price To" />
+          <input type="text" placeholder="Part Number" />
+          <input type="text" placeholder="Year From" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+          <input type="text" placeholder="Year To" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+        </div>
+
+        <div class="part-row">
+          <label>Tail light on trunk</label>
+          <input type="text" placeholder="Price From" />
+          <input type="text" placeholder="Price To" />
+          <input type="text" placeholder="Part Number" />
+          <input type="text" placeholder="Year From" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+          <input type="text" placeholder="Year To" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+        </div>
+
+        <div class="part-row">
+          <label>Grille</label>
+          <input type="text" placeholder="Price From" />
+          <input type="text" placeholder="Price To" />
+          <input type="text" placeholder="Part Number" />
+          <input type="text" placeholder="Year From" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+          <input type="text" placeholder="Year To" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+        </div>
+
+        <div class="part-row">
+          <label>Grille Lower</label>
+          <input type="text" placeholder="Price From" />
+          <input type="text" placeholder="Price To" />
+          <input type="text" placeholder="Part Number" />
+          <input type="text" placeholder="Year From" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+          <input type="text" placeholder="Year To" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+        </div>
+
+        <div class="part-row">
+          <label>Fender</label>
+          <input type="text" placeholder="Price From" />
+          <input type="text" placeholder="Price To" />
+          <input type="text" placeholder="Part Number" />
+          <input type="text" placeholder="Year From" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+          <input type="text" placeholder="Year To" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+        </div>
+
+        <div class="part-row">
+          <label>Hood</label>
+          <input type="text" placeholder="Price From" />
+          <input type="text" placeholder="Price To" />
+          <input type="text" placeholder="Part Number" />
+          <input type="text" placeholder="Year From" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+          <input type="text" placeholder="Year To" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+        </div>
+
+        <div class="part-row">
+          <label>Tailgate</label>
+          <input type="text" placeholder="Price From" />
+          <input type="text" placeholder="Price To" />
+          <input type="text" placeholder="Part Number" />
+          <input type="text" placeholder="Year From" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+          <input type="text" placeholder="Year To" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+        </div>
+
+        <div class="part-row">
+          <label>Mirror</label>
+          <input type="text" placeholder="Price From" />
+          <input type="text" placeholder="Price To" />
+          <input type="text" placeholder="Part Number" />
+          <input type="text" placeholder="Year From" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+          <input type="text" placeholder="Year To" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+        </div>
+          <div class="part-row">
+              <label>Door Front</label>
+              <input type="text" placeholder="Price From" />
+              <input type="text" placeholder="Price To" />
+              <input type="text" placeholder="Part Number" />
+              <input type="text" placeholder="Year From" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+              <input type="text" placeholder="Year To" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+          </div>
+
+          <div class="part-row">
+              <label>Door Rear</label>
+              <input type="text" placeholder="Price From" />
+              <input type="text" placeholder="Price To" />
+              <input type="text" placeholder="Part Number" />
+              <input type="text" placeholder="Year From" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+              <input type="text" placeholder="Year To" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+          </div>
+            <div class="part-row">
+              <label>Glass Door front</label>
+              <input type="text" placeholder="Price From" />
+              <input type="text" placeholder="Price To" />
+              <input type="text" placeholder="Part Number" />
+              <input type="text" placeholder="Year From" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+              <input type="text" placeholder="Year To" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+            </div>
+            <div class="part-row">
+            <label>Glass Door Rear (Side)</label>
+            <input type="text" placeholder="Price From" />
+            <input type="text" placeholder="Price To" />
+            <input type="text" placeholder="Part Number" />
+            <input type="text" placeholder="Year From" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+            <input type="text" placeholder="Year To" maxlength="4" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+          </div>
+      </div>
+
+      <div class="submit-wrapper">
+        <button id="submit" class="submit-btn">Submit Data</button>
+      </div>
+    </form>
+  </div>
+
+
+  <script src="{{ url_for('static', filename='dataForm.js') }}" defer></script>
+
+</body>
+</html>
+

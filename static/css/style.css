@@ -1,0 +1,136 @@
+/*
+
+@font-face {
+    font-family:'Outfit';
+    src: url('./font/outfit_regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} 
+    */
+    /*
+ This will work locally or on a web server, but .woff2 is still recommended for real deployments (smaller size, faster loading).
+
+*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: outfit;
+}
+html,body{
+    height: 100%;
+    background: linear-gradient(to right, #92bde7,#f7b98d);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  
+    flex-direction: column;
+    color: white;
+  }
+.page-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+ 
+  text-align: center;
+  align-items: center;
+  }
+
+
+
+.logo{
+    position:absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 24px;
+    font-weight: bolder;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+ 
+
+    }
+
+
+h1{
+    font-size: 48px;
+    font-weight:700;
+    margin-top: 150px;
+    }
+
+p.subtitle{
+    margin-top: 10px;
+    font-size: 20px;
+      color: #fff;
+    }
+
+.search-section{
+    margin-top: 30px;
+    }
+
+input[type="text"]
+{
+  padding: 10px 20px;
+  width: 300px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  outline: none;
+  color: #333;
+  margin-top: 100px;
+}
+input:hover{
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0055aa;
+}
+
+.ai-button {
+  margin-top: 250x;
+  background-color: #002244;
+  
+
+}
+
+.disclaimer {
+  
+  bottom: 20px;
+  width: 80%;
+  font-size: 16px;
+  color: #e0e0e0;
+  text-align: left;
+  
+}
+
+.disclaimer strong {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.footer {
+  
+  bottom: 10px;
+  right: 20px;
+  font-size: 16px;
+  color: #f0f0f0;
+}

@@ -1,0 +1,36 @@
+@app.route('/search',methods=['POST'])
+def searchParts():
+    data=request.get_json()
+    vehicle=data.get('vehicle','').strip()
+    print("Search request received:", data)
+
+
+    try:
+        parts=vehicle.split()
+        
+        year=int(parts[0])
+        make=parts[1].lower()
+        model=parts[2].capitalize()
+      
+        
+        trim=" ".join(parts[3:]).upper()
+
+        makeModelKey=f"{make}{model}"
+        partsRef=db.collection("make_model_parts").document(makeModelKey).collection("parts")
+        partsDocs=partsRef.stream()
+        
+        compatibleParts=[]
+        for doc in partsDocs:
+            data=doc.to_dict()
+            years=data.get('compatible_years', [])
+            trims=data.get('compatible_trims', [])
+            if year in years and trim in  trims:
+                compatibleParts.append({"id":doc.id,**data})
+
+        if not compatibleParts:
+            return jsonify([]), 200
+        return jsonify(compatibleParts)
+
+    except Exception as e:
+        print("Error:",e)
+        return jsonify({"error":str(e)}),500

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parts Compatibility Checker</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/homeStyle.css') }}?v=2">
+</head>
+<body>
+  <div class="logo">FCM Dallas</div>
+
+  <div class="container">
+    <h1>Welcome</h1>
+    <p class="subtitle">To Our Parts Data Center</p>
+     <div id="lookup-row">
+    <select id="yearSelect"><option value="">Year</option></select>
+    <select id="makeSelect"><option value="">Make</option></select>
+    <select id="modelSelect" disabled><option value="">Model</option></select>
+    <select id="trimSelect" disabled><option value="">Trim</option></select>
+  </div>
+    <div class="button-group">
+      <button class="search-btn" id="search-button" name="search-button">Search</button>
+      <div id="alertBoxContainer"></div>
+      <button class="ai-btn" disabled>AI Tool (Coming Soon)</button>
+      <p class="note">*AI-powered recommendations will be available in future updates.</p>
+      <button class="labor-btn" id="labor-button">Labor Cost Sheet</button>
+    </div>
+    </div>
+<p id="db-stats" class="db-stats">Loading vehicle count…</p>
+
+  
+  <div class="square-card-section">
+  <div class="square-card-container">
+    <div class="square-card">
+      <img src="static/images/hondLogo.png" alt="">
+      <p>Honda</p>
+    </div>
+    <div class="square-card">
+      <img src="static/images/fordLogo.png" alt="Body Work">
+      <p>Ford</p>
+    </div>
+    <div class="square-card">
+      <img src="static/images/lexusLogo" alt="Parts">
+      <p>Lexus</p>
+    </div>
+    <div class="square-card">
+      <img src="static/images/toyotaLogo.png" alt="Parts">
+      <p>Toyota</p>
+    </div>
+    <div class="square-card">
+      <img src="static/images/chevrolteLogo.png" alt="Parts">
+      <p>Chevrolet </p>
+    </div>
+    <div class="square-card">
+      <img src="static/images/gmcLogo.png" alt="Parts">
+      <p>GMC</p>
+    </div>
+    
+  </div>
+</div>
+
+  <div class="footer-note">
+    <p><strong class="highlight">Disclaimer:</strong> The provided estimate represents an average cost for parts. It is not 100% accurate and should be used as a general reference only. These estimates are intended to assist with vehicle evaluations, such as during purchase decisions or initial repair planning.</p>
+    <p><strong class="highlight">Upcoming Update:</strong> Future versions will include additional cost breakdowns, such as body work, paint, and related repairs, to provide a more comprehensive estimate.</p>
+    <p><strong class="highlight">Future Updates:</strong> We’re working on integrating advanced AI models with our dataset to provide instant repair estimates based on written damage descriptions — no photo upload required.</p>
+  </div>
+
+  <div class="developer-note">Developed by Aws Radideh</div>
+  <div id="alertBoxContainer"></div>
+  <script type="module" src="{{ url_for('static', filename='homeScript.js') }}"></script>
+
+</body>
+</html>

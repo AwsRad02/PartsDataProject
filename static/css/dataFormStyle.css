@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+
+background: linear-gradient(to right, #92bde7,#f7b98d);
+
+  color: #002b5b;
+  padding: 40px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+
+.wide-input {
+  grid-column: span 4;
+}
+.widemid-input {
+  grid-column: span 4;
+}
+.full-width-input {
+  grid-column: 2 / span 2;
+}
+
+
+.admin-form .form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+}
+
+input[type="text"] {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  flex: 1;
+  min-width: 0;
+}
+
+.check-btn {
+  padding: 10px 20px;
+  background-color: #003e8a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.parts-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.part-row {
+  display: grid;
+  grid-template-columns: 180px repeat(5, 1fr);
+  align-items: center;
+  gap: 10px;
+}
+
+.part-row label {
+  font-weight: 500;
+}
+#check-row { grid-template-columns: 180px repeat(5, 1fr); }
+
+/* ADD row needs 1 + 6 columns (label + 6 controls) */
+#add-row {
+  grid-template-columns: 180px repeat(6, 1fr);
+  margin-top: 20px;
+}
+
+/* let inputs/buttons shrink nicely so nothing wraps */
+#add-row > * { min-width: 0; }
+#add-row .check-btn, #check-row .check-btn { width: 100%; }
+
+.submit-wrapper {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.submit-btn {
+  background-color: #003e8a;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.error-shake {
+  animation: shake 0.4s;
+  border: 2px solid red !important;
+}
+
+.par-style {
+  text-align: center;   /* Centers the text */
+  font-weight: bold;    /* Makes the text bold */
+  font-size: 24px;      /* Makes the text bigger (adjust px as needed) */
+    color: #003e8a;       /* Sets text color */
+  margin-top: 5px;
+  
+}
