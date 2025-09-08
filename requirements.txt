@@ -1,3 +1,5 @@
 Flask==3.0.3
 gunicorn==22.0.0
-# add anything else you import (requests, pandas, etc.)
+requests==2.32.3
+google-cloud-firestore==2.16.0
+google-auth==2.31.0
